@@ -46,3 +46,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+    # WORLD CONTENT
+  - name: "world-content"
+    label: "Page Content"
+    folder: "_world-content"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "world-content"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Links", name: "links", widget: "markdown", required: false}
